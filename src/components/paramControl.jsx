@@ -1,16 +1,32 @@
-import React, { useState } from "react";
+import React from "react";
 
-function ParamSelector(props){
-    const [cssValue, setCssValue] = useState(0);
+function ParamSelector({ label, min, max, setId, property, value, handleCssChange }){
     const handleInputChange = (event) => {
-        setCssValue(event.target.value);
+        handleCssChange(property, event.target.value);
     };
     return(
-        <div>
-            <label className='form-label' for={props.setId}>Raio da Borda</label>
-            <input className="form-control" value={cssValue} onChange={handleInputChange}></input>
-            <input className='form-range' step={1} min={props.min} max={props.max} value={cssValue} defaultValue={0} id={props.setId}  onChange={handleInputChange} type='range'></input>
-        </div>
+        <section>
+            <label className='form-label' htmlForfor={setId}>{label}</label>
+            <div className="d-flex flex-row">
+                <input
+                className="form-control" 
+                value={value} 
+                onChange={handleInputChange}
+                type='number'
+                />
+                <input 
+                className='form-range' 
+                step={1} 
+                min={min} 
+                max={max} 
+                value={value} 
+                defaultValue={0} 
+                id={setId}  
+                onChange={handleInputChange} 
+                type='range' 
+                />
+            </div>
+        </section>
     );
 }
 

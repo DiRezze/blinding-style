@@ -9,9 +9,8 @@
 }
 
 .tool-bar{
-  width: min-content;
+  width: auto;
   margin: 1rem;
-  background-color: #fefefe;
 }
 .tool-menu{
   padding: 0 4px;
