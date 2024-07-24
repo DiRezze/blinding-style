@@ -16,3 +16,14 @@
 .tool-menu{
   padding: 0 4px;
 }
+.app-main-frame{
+  width: 100vw;
+  height: 100%;
+  padding: 0 2rem;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.card{
+  width: 300px;
+  min-height: 150px;
+}
